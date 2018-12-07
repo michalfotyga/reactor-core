@@ -717,6 +717,13 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * main sequence. Instead it just defers the termination (unless it errors, in which case
 	 * the error suppresses the original termination signal).
 	 * <p>
+	 * <img class="marble" src="doc-files/marbles/usingWhenSuccessForMono.svg" alt="">
+	 * <p>
+	 * Individual cleanups can also be associated with mono cancellation and
+	 * error terminations:
+	 * <p>
+	 * <img class="marble" src="doc-files/marbles/usingWhenFailureForMono.svg" alt="">
+	 * <p>
 	 * Note that if the resource supplying {@link Publisher} emits more than one resource, the
 	 * subsequent resources are dropped ({@link Operators#onNextDropped(Object, Context)}). If
 	 * the publisher errors AFTER having emitted one resource, the error is also silently dropped
@@ -724,10 +731,6 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * An empty completion or error without at least one onNext signal triggers a short-circuit
 	 * of the main sequence with the same terminal signal (no resource is established, no
 	 * cleanup is invoked).
-	 * <p>
-	 * <img class="marble" src="doc-files/marbles/usingWhenSuccessForMono.svg" alt="">
-	 * <p>
-	 * <img class="marble" src="doc-files/marbles/usingWhenFailureForMono.svg" alt="">
 	 *
 	 * @param resourceSupplier a {@link Publisher} that "generates" the resource,
 	 * subscribed for each subscription to the main sequence
@@ -756,6 +759,13 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * main sequence. Instead it just defers the termination (unless it errors, in which case
 	 * the error suppresses the original termination signal).
 	 * <p>
+	 * <img class="marble" src="doc-files/marbles/usingWhenSuccessForMono.svg" alt="">
+	 * <p>
+	 * Individual cleanups can also be associated with mono cancellation and
+	 * error terminations:
+	 * <p>
+	 * <img class="marble" src="doc-files/marbles/usingWhenFailureForMono.svg" alt="">
+	 * <p>
 	 * Note that if the resource supplying {@link Publisher} emits more than one resource, the
 	 * subsequent resources are dropped ({@link Operators#onNextDropped(Object, Context)}). If
 	 * the publisher errors AFTER having emitted one resource, the error is also silently dropped
@@ -763,10 +773,6 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * An empty completion or error without at least one onNext signal triggers a short-circuit
 	 * of the main sequence with the same terminal signal (no resource is established, no
 	 * cleanup is invoked).
-	 * <p>
-	 * <img class="marble" src="doc-files/marbles/usingWhenSuccessForMono.svg" alt="">
-	 * <p>
-	 * <img class="marble" src="doc-files/marbles/usingWhenFailureForMono.svg" alt="">
 	 *
 	 * @param resourceSupplier a {@link Publisher} that "generates" the resource,
 	 * subscribed for each subscription to the main sequence
@@ -3397,7 +3403,7 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * </ul>
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/retryBackofForMono.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/retryBackoffForMono.svg" alt="">
 	 *
 	 * @param numRetries the maximum number of attempts before an {@link IllegalStateException}
 	 * is raised (having the original retry-triggering exception as cause).
