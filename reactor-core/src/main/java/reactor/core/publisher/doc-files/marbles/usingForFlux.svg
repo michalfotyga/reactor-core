@@ -182,4 +182,12 @@
  </text>
  <path d="M77.23 223.71V100.94" id="line1360-5-7" fill="none" fill-opacity="1" stroke="#5b1d88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,6.00000007" stroke-opacity="1" marker-start="url(#marker4415)" marker-end="url(#FilledArrow_Marker_3-3e-7-3-3-4)"/>
  <path id="path32873-3" d="M287.87 222.6V100.94" fill="none" fill-opacity="1" stroke="#5b1d88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,6.00000007" stroke-opacity="1" marker-start="url(#marker3943)" marker-end="url(#FilledArrow_Marker_3-3e-7-3-3-4)"/>
+ <text font-size="12" id="text27113" x="612.15" y="225.78" fill="#885ba9" fill-opacity="1" stroke="none" stroke-width="1" stroke-dasharray="none" stroke-opacity="1">
+  <tspan id="tspan27111" y="238.78" x="612.15" font-weight="400" font-size="14" font-family="Tahoma,'Nimbus Sans L'" fill="#885ba9" fill-opacity="1" stroke-width="1">close</tspan>
+ </text>
+ <text y="225.78" x="402.71" id="text27117" font-size="12" fill="#885ba9" fill-opacity="1" stroke="none" stroke-width="1" stroke-dasharray="none" stroke-opacity="1">
+  <tspan font-size="14" font-weight="400" x="402.71" y="238.78" id="tspan27115" font-family="Tahoma,'Nimbus Sans L'" fill="#885ba9" fill-opacity="1" stroke-width="1">get()</tspan>
+ </text>
+ <path id="path27119" d="M417.8 223.71V100.94" fill="none" fill-opacity="1" stroke="#5b1d88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,6.00000007" stroke-opacity="1" marker-start="url(#marker4415)" marker-end="url(#FilledArrow_Marker_3-3e-7-3-3-4)"/>
+ <path d="M627.15 222.6V100.94" id="path27121" fill="none" fill-opacity="1" stroke="#5b1d88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,6.00000007" stroke-opacity="1" marker-start="url(#marker3943)" marker-end="url(#FilledArrow_Marker_3-3e-7-3-3-4)"/>
 </svg>

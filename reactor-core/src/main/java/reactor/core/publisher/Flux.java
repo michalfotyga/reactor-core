@@ -1728,6 +1728,14 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * main sequence. Instead it just defers the termination (unless it errors, in which case
 	 * the error suppresses the original termination signal).
 	 * <p>
+	 * <img class="marble" src="doc-files/marbles/usingWhenSuccessForFlux.svg" alt="">
+	 * <p>
+	 * Individual cleanups can also be associated with main sequence cancellation and
+	 * error terminations:
+	 * <p>
+	 * <img class="marble" src="doc-files/marbles/usingWhenFailureForFlux.svg" alt="">
+	 *
+	 * <p>
 	 * Note that if the resource supplying {@link Publisher} emits more than one resource, the
 	 * subsequent resources are dropped ({@link Operators#onNextDropped(Object, Context)}). If
 	 * the publisher errors AFTER having emitted one resource, the error is also silently dropped
@@ -1735,17 +1743,14 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * An empty completion or error without at least one onNext signal triggers a short-circuit
 	 * of the main sequence with the same terminal signal (no resource is established, no
 	 * cleanup is invoked).
-	 *
-	 * <p>
-	 * <img class="marble" src="doc-files/marbles/usingWhenSuccessForFlux.svg" alt="">
-	 * <p>
-	 * <img class="marble" src="doc-files/marbles/usingWhenFailureForFlux.svg" alt="">
 	 * <p>
 	 * Additionally, the terminal signal is replaced by any error that might have happened
 	 * in the terminating {@link Publisher}:
+	 * <p>
 	 * <img class="marble" src="doc-files/marbles/usingWhenCleanupErrorForFlux.svg" alt="">
 	 * <p>
 	 * Finally, early cancellations will cancel the resource supplying {@link Publisher}:
+	 * <p>
 	 * <img class="marble" src="doc-files/marbles/usingWhenEarlyCancelForFlux.svg" alt="">
 	 *
 	 * @param resourceSupplier a {@link Publisher} that "generates" the resource,
@@ -1776,6 +1781,13 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * main sequence. Instead it just defers the termination (unless it errors, in which case
 	 * the error suppresses the original termination signal).
 	 * <p>
+	 * <img class="marble" src="doc-files/marbles/usingWhenSuccessForFlux.svg" alt="">
+	 * <p>
+	 * Individual cleanups can also be associated with main sequence cancellation and
+	 * error terminations:
+	 * <p>
+	 * <img class="marble" src="doc-files/marbles/usingWhenFailureForFlux.svg" alt="">
+	 * <p>
 	 * Note that if the resource supplying {@link Publisher} emits more than one resource, the
 	 * subsequent resources are dropped ({@link Operators#onNextDropped(Object, Context)}). If
 	 * the publisher errors AFTER having emitted one resource, the error is also silently dropped
@@ -1783,17 +1795,14 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * An empty completion or error without at least one onNext signal triggers a short-circuit
 	 * of the main sequence with the same terminal signal (no resource is established, no
 	 * cleanup is invoked).
-	 *
-	 * <p>
-	 * <img class="marble" src="doc-files/marbles/usingWhenSuccessForFlux.svg" alt="">
-	 * <p>
-	 * <img class="marble" src="doc-files/marbles/usingWhenFailureForFlux.svg" alt="">
 	 * <p>
 	 * Additionally, the terminal signal is replaced by any error that might have happened
 	 * in the terminating {@link Publisher}:
+	 * <p>
 	 * <img class="marble" src="doc-files/marbles/usingWhenCleanupErrorForFlux.svg" alt="">
 	 * <p>
 	 * Finally, early cancellations will cancel the resource supplying {@link Publisher}:
+	 * <p>
 	 * <img class="marble" src="doc-files/marbles/usingWhenEarlyCancelForFlux.svg" alt="">
 	 *
 	 * @param resourceSupplier a {@link Publisher} that "generates" the resource,
