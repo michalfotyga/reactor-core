@@ -7970,7 +7970,7 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * <img class="marble" src="https://raw.githubusercontent.com/reactor/reactor-core/v3.1.3.RELEASE/src/docs/marble/take.png" alt="">
 	 * <p>
 	 * If N is zero, the resulting {@link Flux} completes as soon as this {@link Flux}
-	 * signals its first value (which is not not relayed, though).
+	 * signals its first value (which is not relayed, though).
 	 * <p>
 	 * Note that this operator doesn't manipulate the backpressure requested amount.
 	 * Rather, it merely lets requests from downstream propagate as is and cancels once
